@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: a89c702faa550434a844fa5a2de6b855
+timeCreated: 1454178744
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: First_Tries3:pCylinder1
+    100002: group20
+    100004: group5
+    100006: pCylinder1
+    100008: pCylinder11
+    100010: pCylinder32
+    100012: pCylinder33
+    100014: pCylinder34
+    100016: pCylinder35
+    100018: pCylinder37
+    100020: pCylinder38
+    100022: pCylinder39
+    100024: pPipe4
+    100026: pPlane10
+    100028: pPlane11
+    100030: pPlane12
+    100032: pPlane7
+    100034: pPlane9
+    100036: //RootNode
+    400000: First_Tries3:pCylinder1
+    400002: group20
+    400004: group5
+    400006: pCylinder1
+    400008: pCylinder11
+    400010: pCylinder32
+    400012: pCylinder33
+    400014: pCylinder34
+    400016: pCylinder35
+    400018: pCylinder37
+    400020: pCylinder38
+    400022: pCylinder39
+    400024: pPipe4
+    400026: pPlane10
+    400028: pPlane11
+    400030: pPlane12
+    400032: pPlane7
+    400034: pPlane9
+    400036: //RootNode
+    2300000: First_Tries3:pCylinder1
+    2300002: pCylinder1
+    2300004: pCylinder11
+    2300006: pCylinder32
+    2300008: pCylinder33
+    2300010: pCylinder34
+    2300012: pCylinder35
+    2300014: pCylinder37
+    2300016: pCylinder38
+    2300018: pCylinder39
+    2300020: pPipe4
+    2300022: pPlane10
+    2300024: pPlane11
+    2300026: pPlane12
+    2300028: pPlane7
+    2300030: pPlane9
+    3300000: First_Tries3:pCylinder1
+    3300002: pCylinder1
+    3300004: pCylinder11
+    3300006: pCylinder32
+    3300008: pCylinder33
+    3300010: pCylinder34
+    3300012: pCylinder35
+    3300014: pCylinder37
+    3300016: pCylinder38
+    3300018: pCylinder39
+    3300020: pPipe4
+    3300022: pPlane10
+    3300024: pPlane11
+    3300026: pPlane12
+    3300028: pPlane7
+    3300030: pPlane9
+    4300000: pCylinder11
+    4300002: pPipe4
+    4300004: pCylinder1
+    4300006: pCylinder32
+    4300008: pCylinder33
+    4300010: pPlane7
+    4300012: First_Tries3:pCylinder1
+    4300014: pCylinder35
+    4300016: pCylinder37
+    4300018: pCylinder38
+    4300020: pCylinder39
+    4300022: pPlane12
+    4300024: pCylinder34
+    4300026: pPlane9
+    4300028: pPlane10
+    4300030: pPlane11
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

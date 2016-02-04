@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: abae0b31e25841045aa67cfbad2ceec7
+timeCreated: 1454177192
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: //RootNode
+    100004: Head
+    100006: Left_Back_leg
+    100008: Left_Forearm
+    100010: pSphere10
+    100012: pSphere11
+    100014: pSphere12
+    100016: pSphere2
+    100018: pSphere3
+    100020: pSphere4
+    100022: pSphere5
+    100024: pSphere6
+    100026: pSphere7
+    100028: pSphere8
+    100030: Right_Back_Leg
+    100032: Right_Forearm
+    400000: Body
+    400002: //RootNode
+    400004: Head
+    400006: Left_Back_leg
+    400008: Left_Forearm
+    400010: pSphere10
+    400012: pSphere11
+    400014: pSphere12
+    400016: pSphere2
+    400018: pSphere3
+    400020: pSphere4
+    400022: pSphere5
+    400024: pSphere6
+    400026: pSphere7
+    400028: pSphere8
+    400030: Right_Back_Leg
+    400032: Right_Forearm
+    2300000: Body
+    2300002: Head
+    2300004: pSphere10
+    2300006: pSphere11
+    2300008: pSphere12
+    2300010: pSphere2
+    2300012: pSphere3
+    2300014: pSphere4
+    2300016: pSphere5
+    2300018: pSphere6
+    2300020: pSphere7
+    2300022: pSphere8
+    3300000: Body
+    3300002: Head
+    3300004: pSphere10
+    3300006: pSphere11
+    3300008: pSphere12
+    3300010: pSphere2
+    3300012: pSphere3
+    3300014: pSphere4
+    3300016: pSphere5
+    3300018: pSphere6
+    3300020: pSphere7
+    3300022: pSphere8
+    4300000: Body
+    4300002: pSphere11
+    4300004: pSphere12
+    4300006: Head
+    4300008: pSphere8
+    4300010: pSphere10
+    4300012: pSphere2
+    4300014: pSphere4
+    4300016: pSphere6
+    4300018: pSphere3
+    4300020: pSphere5
+    4300022: pSphere7
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Left_Back_leg
+        weight: 1
+      - path: Left_Back_leg/pSphere2
+        weight: 1
+      - path: Left_Back_leg/pSphere4
+        weight: 1
+      - path: Left_Back_leg/pSphere6
+        weight: 1
+      - path: Left_Forearm
+        weight: 1
+      - path: Left_Forearm/pSphere11
+        weight: 1
+      - path: Left_Forearm/pSphere12
+        weight: 1
+      - path: Right_Back_Leg
+        weight: 1
+      - path: Right_Back_Leg/pSphere3
+        weight: 1
+      - path: Right_Back_Leg/pSphere5
+        weight: 1
+      - path: Right_Back_Leg/pSphere7
+        weight: 1
+      - path: Right_Forearm
+        weight: 1
+      - path: Right_Forearm/pSphere8
+        weight: 1
+      - path: Right_Forearm/pSphere10
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

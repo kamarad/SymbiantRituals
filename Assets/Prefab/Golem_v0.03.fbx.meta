@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: 6dbb8dfbed8b696428e43c893008205b
+timeCreated: 1454201653
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Arm_Group
+    100004: Body
+    100006: Body1
+    100008: //RootNode
+    100010: Head
+    100012: Left_Back_leg
+    100014: Leg_Front
+    100016: Mask
+    100018: pCube1
+    100020: pCylinder1
+    100022: pCylinder2
+    100024: pCylinder6
+    100026: pCylinder7
+    100028: pSphere2
+    100030: pSphere3
+    100032: pSphere4
+    100034: pSphere5
+    100036: pSphere6
+    100038: pSphere7
+    100040: pSphere8
+    100042: pSphere9
+    100044: Right_Back_Leg
+    100046: Right_Forearm
+    100048: Seat
+    100050: Shoulder_Left
+    100052: Shoulder_Left1
+    100054: Wizard
+    400000: Arm
+    400002: Arm_Group
+    400004: Body
+    400006: Body1
+    400008: //RootNode
+    400010: Head
+    400012: Left_Back_leg
+    400014: Leg_Front
+    400016: Mask
+    400018: pCube1
+    400020: pCylinder1
+    400022: pCylinder2
+    400024: pCylinder6
+    400026: pCylinder7
+    400028: pSphere2
+    400030: pSphere3
+    400032: pSphere4
+    400034: pSphere5
+    400036: pSphere6
+    400038: pSphere7
+    400040: pSphere8
+    400042: pSphere9
+    400044: Right_Back_Leg
+    400046: Right_Forearm
+    400048: Seat
+    400050: Shoulder_Left
+    400052: Shoulder_Left1
+    400054: Wizard
+    2300000: Arm
+    2300002: Body
+    2300004: Body1
+    2300006: Head
+    2300008: Mask
+    2300010: pCube1
+    2300012: pCylinder1
+    2300014: pCylinder2
+    2300016: pCylinder6
+    2300018: pCylinder7
+    2300020: pSphere2
+    2300022: pSphere3
+    2300024: pSphere4
+    2300026: pSphere5
+    2300028: pSphere6
+    2300030: pSphere7
+    2300032: pSphere8
+    2300034: pSphere9
+    2300036: Shoulder_Left
+    2300038: Shoulder_Left1
+    3300000: Arm
+    3300002: Body
+    3300004: Body1
+    3300006: Head
+    3300008: Mask
+    3300010: pCube1
+    3300012: pCylinder1
+    3300014: pCylinder2
+    3300016: pCylinder6
+    3300018: pCylinder7
+    3300020: pSphere2
+    3300022: pSphere3
+    3300024: pSphere4
+    3300026: pSphere5
+    3300028: pSphere6
+    3300030: pSphere7
+    3300032: pSphere8
+    3300034: pSphere9
+    3300036: Shoulder_Left
+    3300038: Shoulder_Left1
+    4300000: Head
+    4300002: Body
+    4300004: pSphere8
+    4300006: pSphere2
+    4300008: pSphere4
+    4300010: pSphere6
+    4300012: pSphere3
+    4300014: pSphere5
+    4300016: pSphere7
+    4300018: pCube1
+    4300020: pCylinder1
+    4300022: pCylinder2
+    4300024: pCylinder6
+    4300026: pCylinder7
+    4300028: pSphere9
+    4300030: Shoulder_Left
+    4300032: Shoulder_Left1
+    4300034: Body1
+    4300036: Mask
+    4300038: Arm
+    7400000: Walking
+    7400002: Bash
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm_Group
+        weight: 1
+      - path: Arm_Group/Arm
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Left_Back_leg
+        weight: 1
+      - path: Left_Back_leg/pSphere2
+        weight: 1
+      - path: Left_Back_leg/pSphere4
+        weight: 1
+      - path: Left_Back_leg/pSphere6
+        weight: 1
+      - path: Leg_Front
+        weight: 1
+      - path: Leg_Front/pCylinder7
+        weight: 1
+      - path: Leg_Front/pSphere9
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Right_Back_Leg
+        weight: 1
+      - path: Right_Back_Leg/pSphere3
+        weight: 1
+      - path: Right_Back_Leg/pSphere5
+        weight: 1
+      - path: Right_Back_Leg/pSphere7
+        weight: 1
+      - path: Right_Forearm
+        weight: 1
+      - path: Right_Forearm/pSphere8
+        weight: 1
+      - path: Seat
+        weight: 1
+      - path: Seat/pCube1
+        weight: 1
+      - path: Seat/pCylinder1
+        weight: 1
+      - path: Seat/pCylinder2
+        weight: 1
+      - path: Wizard
+        weight: 1
+      - path: Wizard/Body1
+        weight: 1
+      - path: Wizard/Mask
+        weight: 1
+      - path: Wizard/Shoulder_Left
+        weight: 1
+      - path: Wizard/Shoulder_Left1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bash
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm_Group
+        weight: 1
+      - path: Arm_Group/Arm
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Left_Back_leg
+        weight: 1
+      - path: Left_Back_leg/pSphere2
+        weight: 1
+      - path: Left_Back_leg/pSphere4
+        weight: 1
+      - path: Left_Back_leg/pSphere6
+        weight: 1
+      - path: Leg_Front
+        weight: 1
+      - path: Leg_Front/pCylinder7
+        weight: 1
+      - path: Leg_Front/pSphere9
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Right_Back_Leg
+        weight: 1
+      - path: Right_Back_Leg/pSphere3
+        weight: 1
+      - path: Right_Back_Leg/pSphere5
+        weight: 1
+      - path: Right_Back_Leg/pSphere7
+        weight: 1
+      - path: Right_Forearm
+        weight: 1
+      - path: Right_Forearm/pSphere8
+        weight: 1
+      - path: Seat
+        weight: 1
+      - path: Seat/pCube1
+        weight: 1
+      - path: Seat/pCylinder1
+        weight: 1
+      - path: Seat/pCylinder2
+        weight: 1
+      - path: Wizard
+        weight: 1
+      - path: Wizard/Body1
+        weight: 1
+      - path: Wizard/Mask
+        weight: 1
+      - path: Wizard/Shoulder_Left
+        weight: 1
+      - path: Wizard/Shoulder_Left1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
