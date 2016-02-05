@@ -7,11 +7,15 @@ public class SymbiotController : MonoBehaviour {
 
     [SerializeField]
     private AudioClip stunAudio;
+    [SerializeField]
+    private AudioClip shieldAudio;
 
     [SerializeField]
     private float dashForce = 3f;
     [SerializeField]
     private float golemTurnRate = 1f;
+    [SerializeField]
+    private float moveCycleTime = 2f;
     [SerializeField]
 	private float forwardStrafeRatio = 0.7f;
 	[SerializeField]
@@ -37,14 +41,8 @@ public class SymbiotController : MonoBehaviour {
     private GunController gun;
     private SymbiotState symState;
 
-    private AudioSource roar;
-    private AudioSource walk;
-
-    private float roarMinTime = 3;
-    private float roarMaxTime = 8;
-    private float roarTime = 0;
-
     private bool stun;
+    private float walkAngle;
 
     [SerializeField]
     private float stdStunTime = 3f;
@@ -60,17 +58,6 @@ public class SymbiotController : MonoBehaviour {
 
         symState = GetComponent<SymbiotState>();
 
-        foreach (AudioSource s in golem.GetComponents<AudioSource>())
-        {
-            if (s.clip.name.StartsWith("roar"))
-            {
-                roar = s;
-            } else if (s.clip.name.StartsWith("golem_step"))
-            {
-                walk = s;
-            }
-        }
-
         SetInputs(GameObject.Find("GameManager").GetComponent<ControllerScheme>().GetInputs(GetComponent<PlayerEnergy>().team));
 	}
 
@@ -83,16 +70,6 @@ public class SymbiotController : MonoBehaviour {
         }
         else
         {
-            if (roarTime > 0)
-            {
-                roarTime -= Time.deltaTime;
-            }
-            else
-            {
-                roarTime = 0.3f * (roarMaxTime - roarMinTime) + roarMinTime;
-                roar.Play();
-            }
-
             DoGolemAbilities();
             DoGolemMovement();
             DoWizardMovement();
@@ -105,6 +82,10 @@ public class SymbiotController : MonoBehaviour {
         if (Input.GetButtonDown(golemDashButton))
         {
             symState.DashOn = true;
+            if (symState.DashOn)
+            {
+                golem.GetComponent<GolemAudio>().Dash();
+            }
         }
     }
 
@@ -135,7 +116,7 @@ public class SymbiotController : MonoBehaviour {
             float turn = Input.GetAxisRaw(golemTurnAxis);
 
             Vector3 forwardImpluse = move * golem.transform.forward.normalized;
-            forwardImpluse *= force;
+            forwardImpluse *= force * Mathf.Abs(Mathf.Cos(walkAngle));
             Vector3 sideImpluse = strafe * golem.transform.right.normalized;
             sideImpluse *= force;
 
@@ -143,18 +124,20 @@ public class SymbiotController : MonoBehaviour {
             rb.AddForce(forwardImpluse + sideImpluse, ForceMode.Impulse);
 
             if (move != 0f) {
-                if (golem.gameObject.GetComponent<Animator>().GetBool("dash"))
-                {
-                    roar.Play();
+                if (!golem.gameObject.GetComponent<Animator>().GetBool("walk")) {
+                    golem.gameObject.GetComponent<Animator>().SetBool("halt", false);
+                    golem.gameObject.GetComponent<Animator>().SetBool("walk", true);
+                    walkAngle = 0f;
                 }
-                golem.gameObject.GetComponent<Animator>().SetBool("halt", false);
-                golem.gameObject.GetComponent<Animator>().SetBool("walk", true);
+                else
+                {
+                    walkAngle += Mathf.PI * (2 / moveCycleTime) *move * Time.deltaTime;
+                }
             }
             else
             {
                 golem.gameObject.GetComponent<Animator>().SetBool("halt", true);
                 golem.gameObject.GetComponent<Animator>().SetBool("walk", false);
-                walk.Stop();
             }
             // now rotation
             if (turn != 0f)

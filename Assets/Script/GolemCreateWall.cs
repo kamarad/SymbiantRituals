@@ -28,19 +28,13 @@ public class GolemCreateWall : MonoBehaviour {
         // check if another wall
         if (currentWall != null) return;    // Can't create two walls at the same time!
 
-        // check if mana
-        if (true)
-        //if (playerEnergy.powers >= 1)
-        {
-            playerEnergy.gameObject.GetComponent<SymbiotState>().WallUp = true;
-            //playerEnergy.consumePower(); TODO!
+        playerEnergy.gameObject.GetComponent<SymbiotState>().WallUp = true;
+        transform.parent.gameObject.GetComponent<GolemAudio>().Wall();
 
-            // Create and store wall
-            GameObject wall = GameObject.Instantiate(prefab_golemWall, wallSpawn.position, wallSpawn.rotation) as GameObject;
-            currentWall = wall.GetComponent<GolemWall>();
-            currentWall.onDestroy += ClearWallOnDestroy;
-        }
-        
+        // Create and store wall
+        GameObject wall = GameObject.Instantiate(prefab_golemWall, wallSpawn.position, wallSpawn.rotation) as GameObject;
+        currentWall = wall.GetComponent<GolemWall>();
+        currentWall.onDestroy += ClearWallOnDestroy;
     }
 
     private void ClearWallOnDestroy()
