@@ -5,13 +5,15 @@ public class ScoreBar : MonoBehaviour {
 
     public const float baseWidth = 960f;
     public GameManager gameManager;
-    public RectTransform maskRect;
+    RectTransform maskRect;
     private const float sizeBuffer = 55f;
 
     public TEAMS team;
     
     // Use this for initialization
 	void Start () {
+        maskRect = GetComponent<RectTransform>();
+
         SetProgress(0);
 
         if (team == TEAMS.ONE)
