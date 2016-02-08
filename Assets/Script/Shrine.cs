@@ -39,8 +39,12 @@ public class Shrine : MonoBehaviour {
 	internal bool hasPower = false;
     internal bool occupied;
 
-	// Use this for initialization
-	void Start () {
+    internal delegate void ShrinePowerEvent(Shrine shrine);
+    internal event ShrinePowerEvent onPowerUp;
+    internal event ShrinePowerEvent onPowerDown;
+
+    // Use this for initialization
+    void Start () {
         lights = GetComponentsInChildren<ShrineLight>();
         fsm = new ShrineFSM(this);
         fsm.reset();
@@ -79,6 +83,7 @@ public class Shrine : MonoBehaviour {
         hasPower = true;
         captureLight.enabled = true;
         captureLight.color = hasPowerColor;
+        if (onPowerUp != null) onPowerUp(this);
     }
     
     public bool Occupy(PlayerEnergy player)
@@ -112,6 +117,7 @@ public class Shrine : MonoBehaviour {
         hasPower = false;
         occupied = false;
         player = null;
+        if (onPowerDown != null) onPowerDown(this);
 
 	}
 
@@ -121,6 +127,7 @@ public class Shrine : MonoBehaviour {
 		captureLight.color = player.GetTeamColor();
         player.ReceiveSouls(numSouls);
         StartCoroutine(ShrineLight.FadeInLight(captureLight, captureLight.intensity));
+        if (onPowerDown != null) onPowerDown(this);
     }
 
 }
