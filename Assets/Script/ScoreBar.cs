@@ -4,33 +4,33 @@ using System.Collections;
 public class ScoreBar : MonoBehaviour {
 
     public const float baseWidth = 960f;
-    public GameManager gameManager;
     RectTransform maskRect;
     private const float sizeBuffer = 55f;
 
     public TEAMS team;
+
+    private float scoreLimit;
     
     // Use this for initialization
 	void Start () {
         maskRect = GetComponent<RectTransform>();
 
-        SetProgress(0);
+        SetProgress(team, 0);
 
-        if (team == TEAMS.ONE)
-        {
-            gameManager.onT1ScoreChange += SetProgress;
-        } else
-        {
-            gameManager.onT2ScoreChange += SetProgress;
-        }
+        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        scoreLimit = gameManager.scoreLimit;
+        gameManager.scoreBarHandlers += SetProgress;
     }
 
-    public void SetProgress(int score)
+    public void SetProgress(TEAMS team, int score)
     {
-        float fullWidth = baseWidth - (2f * sizeBuffer);
-        float newWidth = ((fullWidth * (float)score) / (gameManager.scoreLimit));
+        if (this.team == team)
+        {
+            float fullWidth = baseWidth - (2f * sizeBuffer);
+            float newWidth = ((fullWidth * (float)score) / (scoreLimit));
 
-        StartCoroutine(TweenWidth(newWidth));
+            StartCoroutine(TweenWidth(newWidth));
+        }
     }
 
     private void ChangeBar(float newWidth)
@@ -41,7 +41,7 @@ public class ScoreBar : MonoBehaviour {
     IEnumerator TweenWidth(float w)
     {
         int iterations = 30;
-        float currentWidth = maskRect.sizeDelta.x - sizeBuffer;
+        float currentWidth = maskRect.sizeDelta.x;
         float difference = (w - currentWidth) / (float)iterations;
         for (int i = 0; i < iterations; i++)
         {

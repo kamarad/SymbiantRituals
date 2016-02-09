@@ -11,7 +11,6 @@ public class DirectionIndicator : MonoBehaviour {
     
     public Transform player;
     public Transform altar;
-    public ActivateShrines activateShrines;
 
     Dictionary<Shrine, RectTransform> activeIndicators;
     float circleRadius;
@@ -23,8 +22,9 @@ public class DirectionIndicator : MonoBehaviour {
         // Get initial circle radius from baseCircle
         circleRadius = baseCircle.sizeDelta.x / 2f;
 
-        activateShrines.onShrinePowerUp += HandleShrinePowerUp;
-        activateShrines.onShrinePowerDown += HandleShrinePowerDown;
+        ActivateShrines shrineComponent = GameObject.Find("GameManager").GetComponent<ActivateShrines>();
+        shrineComponent.onShrinePowerUp += HandleShrinePowerUp;
+        shrineComponent.onShrinePowerDown += HandleShrinePowerDown;
     }
 
     // Update is called once per frame

@@ -11,9 +11,9 @@ public enum TEAMS
 
 public class GameManager : MonoBehaviour {
 
-    public delegate void ScoreEvent(int score);
-    public event ScoreEvent onT1ScoreChange;
-    public event ScoreEvent onT2ScoreChange;
+    public delegate void ScoreEvent(TEAMS team, int score);
+    public ScoreEvent scoreBarHandlers;
+
     [SerializeField]
     private Text scoreOne;
     [SerializeField]
@@ -57,9 +57,13 @@ public class GameManager : MonoBehaviour {
 			_t2Score += amount;
 			// Update UI!
 		}
-        if (onT1ScoreChange != null) onT1ScoreChange(_t1Score);
-        if (onT2ScoreChange != null) onT2ScoreChange(_t2Score);
+        if (scoreBarHandlers != null)
+        {
+            scoreBarHandlers(TEAMS.ONE, _t1Score);
+            scoreBarHandlers(TEAMS.TWO, _t2Score);
+        }
 
+        Debug.Log("Score changed");
         scoreOne.text = t1Score + " - " + t2Score;
         scoreTwo.text = t2Score + " - " + t1Score;
         CheckVictory();
