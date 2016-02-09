@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ActivateShrines : MonoBehaviour {
 
 	public int maxPoweredShrines = 2;
+    public int numPoweredShrines = 0;
 	public float minimumShrineInterval = 5f;
 	public float maximumShrineInterval = 15f;
 	public Shrine[] shrines;
@@ -12,8 +13,12 @@ public class ActivateShrines : MonoBehaviour {
 	private float timer;
 	private float interval;
 
-	// Use this for initialization
-	void Start () {
+    public delegate void ShrineActivateEvent(Shrine shrine);
+    public event ShrineActivateEvent onShrinePowerUp;
+    public event ShrineActivateEvent onShrinePowerDown;
+
+    // Use this for initialization
+    void Start () {
 		NewCycle();
 	}
 
@@ -23,15 +28,9 @@ public class ActivateShrines : MonoBehaviour {
 		timer += Time.deltaTime;
 		if (timer >= interval)
 		{
-			int active = 0;
-			foreach (Shrine shrine in shrines)
+            if (numPoweredShrines < maxPoweredShrines)
 			{
-				if (shrine.hasPower) active++;
-			}
-
-			if (active < maxPoweredShrines)
-			{
-				DoPower();
+                DoPower();
 			}
 
 			// Restart the timer
@@ -51,7 +50,16 @@ public class ActivateShrines : MonoBehaviour {
 		if (shrines[index].IsReadyForPower())
 		{
 			shrines[index].GivePower();
+            numPoweredShrines++;
+            shrines[index].onPowerDown += HandleShrineDeactivate;
             Debug.Log("Shrine " + shrines[index].gameObject.name + " has power");
+            if (onShrinePowerUp != null) onShrinePowerUp(shrines[index]);
 		}
 	}
+
+    void HandleShrineDeactivate(Shrine shrine)
+    {
+        numPoweredShrines--;
+        if (onShrinePowerDown != null) onShrinePowerDown(shrine);
+    }
 }

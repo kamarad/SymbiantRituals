@@ -23,6 +23,13 @@ public class PlayerEnergy : MonoBehaviour {
     public event BurnOutEvent onBurnout;    // When the user completely depletes the energy bar
 
     private int powers;          // tussen 0 en 3?
+    public bool hasPowers
+    {
+        get
+        {
+            return (powers > 0);
+        }
+    }
     private bool drained = false;
     private float regenSpeed = 0.05f;   // 2 seconds to recharge fully
     private bool _burnout = false;
